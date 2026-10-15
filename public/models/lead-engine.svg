@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="cardBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0B1426"/>
+      <stop offset="100%" stop-color="#040913"/>
+    </radialGradient>
+    <radialGradient id="funnelGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="funnelBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" rx="36" fill="url(#cardBg)"/>
+  <circle cx="300" cy="300" r="160" fill="url(#funnelGlow)" filter="url(#funnelBlur)"/>
+
+  <!-- Funnel of Light Particles -->
+  <g transform="translate(300, 270)">
+    <!-- Top glass ring -->
+    <ellipse cx="0" cy="-70" rx="130" ry="38" fill="#FFFFFF" fill-opacity="0.05" stroke="#22D3EE" stroke-width="2.5" stroke-opacity="0.9"/>
+    <ellipse cx="0" cy="-35" rx="100" ry="28" fill="#8B5CF6" fill-opacity="0.15" stroke="#8B5CF6" stroke-width="2"/>
+    <ellipse cx="0" cy="5" rx="68" ry="18" fill="#22D3EE" fill-opacity="0.2" stroke="#22D3EE" stroke-width="1.8"/>
+    <ellipse cx="0" cy="45" rx="36" ry="10" fill="#EC4899" fill-opacity="0.3" stroke="#EC4899" stroke-width="2"/>
+
+    <!-- Concentrated beam exiting funnel -->
+    <path d="M-10,50 L-4,130 L4,130 L10,50 Z" fill="#22D3EE" opacity="0.85" filter="url(#funnelBlur)"/>
+    <line x1="0" y1="50" x2="0" y2="135" stroke="#FFFFFF" stroke-width="3"/>
+
+    <!-- Floating light particles -->
+    <circle cx="-50" cy="-60" r="3.5" fill="#22D3EE"/>
+    <circle cx="45" cy="-75" r="4" fill="#FFFFFF"/>
+    <circle cx="-25" cy="-20" r="4.5" fill="#EC4899"/>
+    <circle cx="30" cy="-10" r="3" fill="#22D3EE"/>
+    <circle cx="-15" cy="20" r="4" fill="#8B5CF6"/>
+    <circle cx="12" cy="18" r="3.5" fill="#FFFFFF"/>
+
+    <!-- Magenta rim accent -->
+    <path d="M95,-60 A130,38 0 0,1 125,-70" fill="none" stroke="#EC4899" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

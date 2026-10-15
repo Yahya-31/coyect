@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "Space Grotesk", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-navy-base: #ffffff;
+  --color-navy-surface: #f8fafc;
+  --color-navy-card: #ffffff;
+  --color-primary-white: #ffffff;
+  --color-secondary-blue: #2563eb;
+  --color-blue-electric: #1d4ed8;
+  --color-blue-glow: #3b82f6;
+  --color-cyan-glow: #0284c7;
+  --color-cyan-primary: #0369a1;
+  --color-amber-accent: #2563eb;
+}
+
+/* Shimmer keyframes for headline text with deep Blue and royal blue glow */
+@keyframes text-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    #1d4ed8 0%,
+    #2563eb 25%,
+    #3b82f6 50%,
+    #2563eb 75%,
+    #1d4ed8 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: text-shimmer 4s ease-in-out infinite;
+}
+
+/* Caret blinking keyframes for hero text */
+@keyframes caret-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animate-caret {
+  animation: caret-blink 0.8s step-end infinite;
+}
+
+/* 3D perspective containers */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+/* Luxury smooth scroll & text rendering */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* Custom scrollbar for modern crisp white aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}

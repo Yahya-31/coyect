@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="cardBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0B1426"/>
+      <stop offset="100%" stop-color="#040913"/>
+    </radialGradient>
+    <radialGradient id="prismGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="prismBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="25"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" rx="36" fill="url(#cardBg)"/>
+  <circle cx="300" cy="300" r="160" fill="url(#prismGlow)" filter="url(#prismBlur)"/>
+
+  <!-- Optical Prism Splitting Light into Spectral Rays -->
+  <g transform="translate(300, 300)">
+    <!-- Incoming White Light Ray -->
+    <line x1="-190" y1="20" x2="-45" y2="5" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Glass Triangular Prism (3D Isometric) -->
+    <polygon points="0,-120 90,75 -90,75" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-width="2.5" stroke-opacity="0.8"/>
+    <polygon points="0,-120 90,75 50,95 -40,-100" fill="#22D3EE" fill-opacity="0.12"/>
+    <polygon points="0,-120 -90,75 -50,95 40,-100" fill="#8B5CF6" fill-opacity="0.15"/>
+
+    <!-- Specular highlight facet -->
+    <polygon points="-5,-110 75,65 60,70 -10,-100" fill="#FFFFFF" fill-opacity="0.3"/>
+
+    <!-- Light Refraction Inside Prism -->
+    <polygon points="-45,5 20,20 -15,55" fill="#FFFFFF" fill-opacity="0.35"/>
+
+    <!-- Dispersed Spectral Rays (Cyan -> Violet -> Magenta) -->
+    <path d="M20,20 L180,-25" stroke="#22D3EE" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+    <path d="M20,28 L185,15" stroke="#8B5CF6" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M15,36 L175,55" stroke="#EC4899" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+
+    <!-- Magenta rim light -->
+    <line x1="0" y1="-120" x2="90" y2="75" stroke="#EC4899" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

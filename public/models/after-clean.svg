@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="cleanBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#08142b"/>
+      <stop offset="60%" stop-color="#040913"/>
+      <stop offset="100%" stop-color="#02050B"/>
+    </radialGradient>
+    <radialGradient id="glowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cleanBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#cleanBg)"/>
+  <circle cx="400" cy="300" r="220" fill="url(#glowG)" filter="url(#cleanBlur)"/>
+
+  <!-- Clean Harmonious 3D Crystal Core -->
+  <g transform="translate(400, 300)">
+    <!-- Outer Translucent Glass Torus -->
+    <ellipse cx="0" cy="0" rx="170" ry="60" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="140" ry="140" fill="#FFFFFF" fill-opacity="0.04" stroke="#8B5CF6" stroke-width="2" stroke-opacity="0.8"/>
+    
+    <!-- Central Glowing 3D Glass Crystal -->
+    <polygon points="0,-90 75,-30 75,50 0,100 -75,50 -75,-30" fill="#22D3EE" fill-opacity="0.2" stroke="#22D3EE" stroke-width="2"/>
+    <polygon points="0,-90 75,-30 0,0 -75,-30" fill="#FFFFFF" fill-opacity="0.3"/>
+    <polygon points="0,0 75,-30 75,50 0,100" fill="#8B5CF6" fill-opacity="0.35"/>
+    <polygon points="0,0 -75,-30 -75,50 0,100" fill="#EC4899" fill-opacity="0.25"/>
+
+    <!-- Concentric Light Particles -->
+    <circle cx="-120" cy="-40" r="3.5" fill="#22D3EE"/>
+    <circle cx="130" cy="30" r="4" fill="#8B5CF6"/>
+    <circle cx="90" cy="-80" r="3" fill="#FFFFFF"/>
+    <circle cx="-90" cy="70" r="3" fill="#EC4899"/>
+    
+    <!-- Magenta Rim Accent -->
+    <path d="M50,-85 A140,140 0 0,1 140,0" fill="none" stroke="#EC4899" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

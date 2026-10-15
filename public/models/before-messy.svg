@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="dimBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="100%" stop-color="#040913"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#dimBg)"/>
+
+  <!-- Messy tangled flat spaghetti wireframe -->
+  <g opacity="0.45" stroke="#475569" stroke-width="1.5" fill="none">
+    <!-- Tangled erratic lines -->
+    <path d="M120,100 C240,260 80,380 260,320 S450,120 380,280" />
+    <path d="M200,480 C150,300 350,420 480,240 S200,80 520,160" />
+    <path d="M300,520 C420,380 250,220 580,360" stroke-dasharray="6 4"/>
+    <path d="M160,200 L320,180 L280,340 L440,300 L400,450" />
+
+    <!-- Disjointed flat grey boxes -->
+    <rect x="140" y="140" width="90" height="50" rx="4" stroke="#64748B"/>
+    <rect x="340" y="240" width="110" height="60" rx="4" stroke="#64748B"/>
+    <rect x="220" y="380" width="100" height="55" rx="4" stroke="#64748B"/>
+    <rect x="460" y="140" width="80" height="45" rx="4" stroke="#64748B"/>
+    
+    <!-- Red alert dots -->
+    <circle cx="230" cy="165" r="4" fill="#F43F5E"/>
+    <circle cx="450" cy="270" r="4" fill="#F43F5E"/>
+  </g>
+
+  <!-- Glitchy flat text fragments -->
+  <text x="155" y="170" fill="#94A3B8" font-family="monospace" font-size="11">data_err_01</text>
+  <text x="355" y="275" fill="#94A3B8" font-family="monospace" font-size="11">unmapped_flow</text>
+  <text x="235" y="412" fill="#94A3B8" font-family="monospace" font-size="11">latency_drop</text>
+  <text x="475" y="167" fill="#F43F5E" font-family="monospace" font-size="11">404_loss</text>
+</svg>
